@@ -3,6 +3,7 @@ resolver = "2"
 members = [
   "kits/bottlerocket-core-kit",
   "packages/amazon-ecs-cni-plugins",
+  "packages/aws-clock-bound",
   "packages/amazon-ssm-agent",
   "packages/amazon-vpc-cni-plugins",
   "packages/aws-iam-authenticator",
@@ -129,5 +130,7 @@ members = [
   "packages/tpm2-tools",
   "packages/systemd-257",
   "packages/util-linux",
-  "packages/xfsprogs"
+  "packages/xfsprogs",
+  "packages/firecracker",
+  "packages/nitro-cli"
 ]

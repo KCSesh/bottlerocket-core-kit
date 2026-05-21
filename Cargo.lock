@@ -24,6 +24,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "aws-clock-bound"
+version = "0.1.0"
+dependencies = [
+ "glibc",
+]
+
+[[package]]
 name = "aws-iam-authenticator"
 version = "0.1.0"
 dependencies = [
@@ -75,6 +82,7 @@ dependencies = [
  "amazon-ecs-cni-plugins",
  "amazon-ssm-agent",
  "amazon-vpc-cni-plugins",
+ "aws-clock-bound",
  "aws-iam-authenticator",
  "aws-otel-collector",
  "aws-signer-notation-plugin",
@@ -112,6 +120,7 @@ dependencies = [
  "ethtool",
  "filesystem",
  "findutils",
+ "firecracker",
  "glibc",
  "grep",
  "host-ctr",
@@ -176,6 +185,7 @@ dependencies = [
  "mdadm",
  "netdog",
  "nftables",
+ "nitro-cli",
  "notation",
  "nvidia-container-toolkit",
  "nvidia-k8s-device-plugin",
@@ -446,6 +456,14 @@ version = "0.1.0"
 dependencies = [
  "glibc",
  "libselinux",
+]
+
+[[package]]
+name = "firecracker"
+version = "0.1.0"
+dependencies = [
+ "glibc",
+ "libseccomp",
 ]
 
 [[package]]
@@ -958,6 +976,13 @@ dependencies = [
  "libmnl",
  "libnftnl",
  "readline",
+]
+
+[[package]]
+name = "nitro-cli"
+version = "0.1.0"
+dependencies = [
+ "glibc",
 ]
 
 [[package]]

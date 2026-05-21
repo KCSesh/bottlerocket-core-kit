@@ -57,6 +57,10 @@
 (filecon "/.*/usr(/fips)?/bin/containerd.*" file runtime_exec)
 (filecon "/.*/usr(/fips)?/bin/docker.*" file runtime_exec)
 (filecon "/.*/usr(/fips)?/bin/host-ctr" file runtime_exec)
+
+; VM managers
+(filecon "/.*/usr(/fips)?/bin/firecracker" file vm_exec)
+(filecon "/.*/usr(/fips)?/bin/jailer" file vm_exec)
 (filecon "/.*/usr(/fips)?/bin/runc.*" file runtime_exec)
 (filecon "/.*/usr(/fips)?/bin/shibaken" file api_exec)
 (filecon "/.*/usr(/fips)?/bin/soci-snapshotter.*" file runtime_exec)

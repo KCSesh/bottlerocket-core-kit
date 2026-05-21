@@ -1,0 +1,12 @@
+--- a/build/run_bindgen.rs
++++ b/build/run_bindgen.rs
+@@ -334,6 +334,9 @@ fn ensure_bindgen_available() {
+ }
+ 
+ pub fn run(include_dirs: &[PathBuf]) {
++    // Skip bindgen for AWS-LC - use pre-generated bindings
++    return;
++
+     ensure_bindgen_available();
+ 
+     let out_dir = PathBuf::from(env::var_os("OUT_DIR").unwrap());

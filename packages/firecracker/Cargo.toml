@@ -1,0 +1,27 @@
+[package]
+name = "firecracker"
+version = "0.1.0"
+edition = "2021"
+publish = false
+build = "../build.rs"
+
+[lib]
+path = "../packages.rs"
+
+[package.metadata.build-package]
+releases-url = "https://github.com/firecracker-microvm/firecracker/releases"
+
+[[package.metadata.build-package.external-files]]
+url = "https://github.com/firecracker-microvm/firecracker/archive/refs/tags/v1.15.1.tar.gz"
+sha512 = "de189646b59a3945af7b92417c095798614db5c84466c8b08def2121283fe949cb85608644fddca7df37cabce2c2dff0608216b969dea0bb51799981a4d51e00"
+bundle-modules = ["rust"]
+bundle-root-path = "firecracker-1.15.1"
+
+[build-dependencies]
+glibc = { path = "../glibc" }
+libseccomp = { path = "../libseccomp" }
+
+[[package.metadata.build-package.external-files]]
+url = "https://s3.amazonaws.com/spec.ccfc.min/firecracker-ci/v1.11/x86_64/vmlinux-5.10.225"
+sha512 = "c11489f1730d122fbf0f2a056335d6888a35c900a4f70ac8dd63b52a90d6e49f48a12f2b757a61b909f28952404d24a3a5f2b7ab3586663e3ba41f21c5677e7c"
+

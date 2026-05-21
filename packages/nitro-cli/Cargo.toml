@@ -1,0 +1,19 @@
+[package]
+name = "nitro-cli"
+version = "0.1.0"
+edition = "2021"
+publish = false
+build = "../build.rs"
+
+[lib]
+path = "../packages.rs"
+
+[package.metadata.build-package]
+releases-url = "https://github.com/aws/aws-nitro-enclaves-cli/releases"
+
+[[package.metadata.build-package.external-files]]
+url = "https://github.com/aws/aws-nitro-enclaves-cli/archive/refs/tags/v1.4.4.tar.gz"
+sha512 = "cb5ab8554551a921550d3b8b6646cd97ec23bcc733792bd9b892f0766f0d5453f8dafc9d413dfe02fb068386a4aa05325f2831eb167ddda9cfdfa173f2fcee6a"
+
+[build-dependencies]
+glibc = { path = "../glibc" }

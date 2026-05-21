@@ -1,0 +1,12 @@
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -18,7 +18,8 @@ driver-bindings = { path = "./driver-bindings" }
+ aws-nitro-enclaves-image-format = "0.5"
+ eif_loader = { path = "./eif_loader" }
+ enclave_build = { path = "./enclave_build" }
+-openssl = "0.10.72"
++openssl = { version = "0.10.72", features = ["aws-lc"] }
++aws-lc-rs = { version = "1", features = ["bindgen"] }
+ vsock = "0.5"
+ vmm-sys-util = "0.15.0"
+ sha2 = "0.9.5"

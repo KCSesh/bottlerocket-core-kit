@@ -87,6 +87,11 @@
 (allow init_t runtime_t (processes (transform)))
 (allow runtime_t runtime_exec_t (file (entrypoint)))
 
+; VM manager domain transition and entrypoint.
+(typetransition init_t vm_exec_t process vm_t)
+(allow init_t vm_t (process (transition)))
+(allow vm_t vm_exec_t (file (entrypoint execute)))
+
 ; `runc` can transition to any of the container subject labels, for
 ; a process started from any of the container object labels.
 (allow runtime_t container_s (processes (transform)))
